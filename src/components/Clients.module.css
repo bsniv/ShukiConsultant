@@ -1,0 +1,56 @@
+.clients {
+  background-color: var(--bg-secondary);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.category {
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  position: relative;
+  display: inline-block;
+}
+
+.subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+.logoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.clientItem {
+  background-color: var(--bg-primary);
+  padding: 1.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.clientItem:hover {
+  transform: scale(1.05);
+  color: var(--primary-color);
+}

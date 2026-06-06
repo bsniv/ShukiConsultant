@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #1e3a8a; /* Deep Blue */
+  --secondary-color: #3b82f6; /* Bright Blue */
+  --accent-color: #f59e0b; /* Amber/Gold for CTAs */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --border-color: #e5e7eb;
+  --font-family: 'Assistant', sans-serif;
+  --max-width: 1200px;
+  --section-padding: 80px 20px;
+}

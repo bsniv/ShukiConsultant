@@ -1,0 +1,62 @@
+.footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem 0 2rem;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.brand h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.brand p {
+  opacity: 0.8;
+}
+
+.links h3 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links a {
+  opacity: 0.8;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.links a:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.copyright p {
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
