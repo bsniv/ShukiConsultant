@@ -26,7 +26,6 @@ const Header: React.FC = () => {
           <ul>
             <li><Link to="/">בית</Link></li>
             <li><Link to="/#services">שירותים</Link></li>
-            <li><Link to="/#insights">מרכז ידע</Link></li>
             <li><Link to="/#about">אודות</Link></li>
             <li><Link to="/#clients">לקוחות</Link></li>
             <li><Link to="/#contact" className={styles.contactCta}>צור קשר</Link></li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, TrendingUp, FileText, Calendar, PieChart, Layout } from 'lucide-react';
+import { Briefcase, FileText, Calendar, PieChart, Layout } from 'lucide-react';
 import styles from './Services.module.css';
 
 interface Service {
@@ -40,12 +40,6 @@ const services: Service[] = [
     title: 'בקרת תקציב לפרויקטים',
     description: 'בניית תקציב מפורט, מעקב תכנון מול ביצוע, חיזוי תזרים מזומנים וזיהוי חריגות בזמן אמת לאורך כל הפרויקט.',
     icon: <PieChart size={40} />,
-  },
-  {
-    id: 'economic-feasibility',
-    title: 'ייעוץ פיננסי וכלכלי',
-    description: 'תכנון פיננסי, תקצוב, מימון, ניהול תזרים מזומנים, מרכזי רווח ופרמטרים תמחיריים לקבלת החלטות מבוססת נתונים.',
-    icon: <TrendingUp size={40} />,
   },
 ];
 

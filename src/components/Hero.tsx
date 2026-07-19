@@ -44,11 +44,11 @@ const Hero: React.FC = () => {
           </div>
           <div className={`${styles.floatCard} ${styles.floatOne}`}>
             <span className={styles.dot} />
-            תוכניות עסקיות והלוואות
+            ניהול לוחות זמנים ובקרת תקציבית
           </div>
           <div className={`${styles.floatCard} ${styles.floatTwo}`}>
             <span className={styles.dot} />
-            לוחות זמנים ובקרת תקציב
+            תוכניות עסקיות והפניה לבקשות להלוואות
           </div>
         </div>
       </div>

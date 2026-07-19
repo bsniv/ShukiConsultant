@@ -23,7 +23,6 @@ const Footer: React.FC = () => {
           <ul>
             <li><Link to="/">בית</Link></li>
             <li><Link to="/#services">שירותים</Link></li>
-            <li><Link to="/#insights">מרכז ידע</Link></li>
             <li><Link to="/#about">אודות</Link></li>
             <li><Link to="/#clients">לקוחות</Link></li>
             <li><Link to="/accessibility" className={styles.accLink}>הצהרת נגישות</Link></li>
