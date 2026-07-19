@@ -1,0 +1,43 @@
+.page {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  max-width: 800px;
+}
+
+.page h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.page h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--primary-color);
+}
+
+.page p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.page ul {
+  list-style: disc;
+  padding-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.updateDate {
+  margin-top: 4rem;
+  font-size: 0.875rem !important;
+  color: var(--text-secondary) !important;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}

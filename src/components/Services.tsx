@@ -1,8 +1,10 @@
 import React from 'react';
-import { Briefcase, TrendingUp, Landmark, FileText, Calendar, PieChart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Briefcase, TrendingUp, FileText, Calendar, PieChart, Layout } from 'lucide-react';
 import styles from './Services.module.css';
 
 interface Service {
+  id: string;
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -10,34 +12,40 @@ interface Service {
 
 const services: Service[] = [
   {
+    id: 'business-consulting',
     title: 'ייעוץ וליווי עסקי',
-    description: 'ליווי אישי משלב הרעיון דרך ההקמה, ההתרחבות והתייצבות של עסקים קיימים.',
+    description: 'ניסיון של מעל 35 שנה בייעוץ כלכלי ופיתוח עסקי — אבחון, גיבוש הרעיון וליווי פיננסי, שיווקי, ארגוני ותפעולי.',
     icon: <Briefcase size={40} />,
   },
   {
-    title: 'בדיקת כדאיות כלכלית',
-    description: 'ניתוח מעמיק של המצב הפיננסי והפוטנציאל העסקי לפני קבלת החלטות הרות גורל.',
-    icon: <TrendingUp size={40} />,
+    id: 'business-model',
+    title: 'מודל עסקי ובדיקת כדאיות',
+    description: 'בניית מודל עסקי (Canvas) הבוחן קהלי יעד, הצעת ערך והכנסות — לצד בדיקת כדאיות כלכלית והתכנות לפרויקטים.',
+    icon: <Layout size={40} />,
   },
   {
-    title: 'הלוואות ומימון',
-    description: 'סיוע בגיוס הלוואות מבנקים ומגופים אחרים, ובניית תוכניות מימון מתאימות.',
-    icon: <Landmark size={40} />,
-  },
-  {
-    title: 'תוכניות עסקיות',
-    description: 'בניית תוכניות עסקיות מותאמות אישית לצרכי הלקוח ולתמיכה בצמיחה העסקית.',
+    id: 'business-plans',
+    title: 'תוכניות עסקיות והלוואות',
+    description: 'כתיבת עשרות תוכניות עסקיות: אשראי ובנקים, מרכז השקעות ומפעל מאושר, הקצאת קרקע, המדען הראשי ותנופה.',
     icon: <FileText size={40} />,
   },
   {
-    title: 'ניהול לוחות זמנים (MS Project)',
-    description: 'בניית תוכניות עבודה ו"מפות" להבטחת סיום מוצלח של פרויקטים בזמן.',
+    id: 'ms-project',
+    title: 'בניית לוחות זמנים לפרויקטים',
+    description: 'תכנון וניהול לוחות זמנים (לו"ז) לפרויקטים מובילים בבנייה ובתשתיות — התוכנית, המפה, הדרך והמצפן לסיום מוצלח.',
     icon: <Calendar size={40} />,
   },
   {
-    title: 'בקרת תקציב וניהול סיכונים',
-    description: 'זיהוי והערכת סיכונים לשיפור תהליכים ומזעור נזקים פוטנציאליים.',
+    id: 'budget-control',
+    title: 'בקרת תקציב לפרויקטים',
+    description: 'בניית תקציב מפורט, מעקב תכנון מול ביצוע, חיזוי תזרים מזומנים וזיהוי חריגות בזמן אמת לאורך כל הפרויקט.',
     icon: <PieChart size={40} />,
+  },
+  {
+    id: 'economic-feasibility',
+    title: 'ייעוץ פיננסי וכלכלי',
+    description: 'תכנון פיננסי, תקצוב, מימון, ניהול תזרים מזומנים, מרכזי רווח ופרמטרים תמחיריים לקבלת החלטות מבוססת נתונים.',
+    icon: <TrendingUp size={40} />,
   },
 ];
 
@@ -45,14 +53,22 @@ const Services: React.FC = () => {
   return (
     <section id="services" className={styles.services}>
       <div className="container">
-        <h2 className={styles.sectionTitle}>השירותים שלנו</h2>
+        <div className={styles.header}>
+          <span className="kicker">מה אנחנו עושים</span>
+          <h2 className={styles.sectionTitle}>שירותי החברה</h2>
+          <p className={styles.sectionIntro}>
+            פתרונות מקיפים החל משלב האבחון המוקדם, דרך אפיון תהליכים ותכנון מפורט,
+            ועד ליישום והטמעה — המשלבים חשיבה עסקית וטכנולוגית.
+          </p>
+        </div>
         <div className={styles.grid}>
-          {services.map((service, index) => (
-            <div key={index} className={styles.card}>
+          {services.map((service) => (
+            <Link to={`/service/${service.id}`} key={service.id} className={styles.card}>
               <div className={styles.icon}>{service.icon}</div>
               <h3 className={styles.cardTitle}>{service.title}</h3>
               <p className={styles.cardDescription}>{service.description}</p>
-            </div>
+              <span className={styles.learnMore}>למידע נוסף ←</span>
+            </Link>
           ))}
         </div>
       </div>

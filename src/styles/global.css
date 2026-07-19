@@ -2,26 +2,36 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  color-scheme: light dark;
 }
 
 body {
   font-family: var(--font-family);
   color: var(--text-primary);
   background-color: var(--bg-primary);
-  line-height: 1.6;
-  direction: rtl; /* Set default direction to RTL for Hebrew */
+  line-height: 1.65;
+  direction: rtl;
   text-align: right;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   color: var(--primary-color);
   margin-bottom: 1rem;
+  line-height: 1.15;
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 a {
@@ -40,6 +50,10 @@ button {
   font-family: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -48,4 +62,58 @@ button {
 
 section {
   padding: var(--section-padding);
+}
+
+/* Section eyebrow / kicker */
+.kicker {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--brand-600);
+  background: var(--brand-100);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+/* Page-load reveal animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.reveal {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Accessibility helpers */
+.high-contrast {
+  --primary-color: #000000;
+  --secondary-color: #0000ff;
+  --brand: #0047ab;
+  --brand-600: #002d80;
+  --bg-primary: #ffffff;
+  --bg-secondary: #eeeeee;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+}
+
+.high-contrast * {
+  border-color: #000000 !important;
 }

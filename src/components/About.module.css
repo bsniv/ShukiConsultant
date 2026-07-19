@@ -3,19 +3,46 @@
 }
 
 .aboutContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 4rem;
   align-items: center;
 }
 
 .image {
-  flex: 1;
+  position: relative;
 }
 
 .image img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 20px 20px 0 var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  bottom: 1.4rem;
+  right: -1.2rem;
+  background: #fff;
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  border-right: 4px solid var(--brand);
+}
+
+.badge strong {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--ink);
+}
+
+.badge span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
 }
 
 .content {
@@ -23,32 +50,67 @@
 }
 
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  margin-bottom: 1.4rem;
 }
 
 .description {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   font-size: 1.1rem;
   color: var(--text-secondary);
 }
 
+.description strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.credentials {
+  margin: 1.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.credentials li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.credIcon {
+  flex-shrink: 0;
+  color: var(--brand);
+  background: var(--brand-100);
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
 .stats {
   display: flex;
-  gap: 3rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
+  gap: 2.5rem;
+  margin-top: 2.2rem;
+  padding-top: 1.8rem;
   border-top: 1px solid var(--border-color);
 }
 
 .stats li {
   display: flex;
   flex-direction: column;
+  gap: 0.15rem;
 }
 
 .stats strong {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  color: var(--primary-color);
+  font-weight: 800;
+  color: var(--brand-600);
 }
 
 .stats span {
@@ -56,13 +118,22 @@
   color: var(--text-secondary);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 900px) {
   .aboutContainer {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .image img {
-    box-shadow: 10px 10px 0 var(--bg-secondary);
+    aspect-ratio: 16 / 11;
+  }
+
+  .badge {
+    right: 1rem;
+  }
+
+  .stats {
+    gap: 1.8rem;
+    flex-wrap: wrap;
   }
 }

@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Source materials (not part of the app build)
+*.docx
+/Logos-June-2026/
+/ShukiConsultantLogo.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
