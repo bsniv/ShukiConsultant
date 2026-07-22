@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         <div className={styles.links}>
           <h3>צור קשר</h3>
           <ul>
-            <li><a href="tel:08-8643633"><Phone size={16} /> 08-8643-633</a></li>
+            <li><a href="tel:0524501010"><Phone size={16} /> 052-450-1010</a></li>
             <li><a href="mailto:shuki@shuki-consultant.com"><Mail size={16} /> shuki@shuki-consultant.com</a></li>
             <li className={styles.address}><MapPin size={16} /> אלברט קמי 7, אשדוד</li>
           </ul>

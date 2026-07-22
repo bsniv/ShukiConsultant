@@ -18,7 +18,7 @@ for (const [path, src] of Object.entries(logoModules)) {
 const names: Record<string, string> = {
   agrigo: 'אגריגו',
   apa: 'אפא חשמלאים',
-  arta: 'ארטה',
+  arta: 'אתראן',
   'ashdodo muni': 'עיריית אשדוד',
   baladi: 'בלאדי',
   'elitar system': 'אליטר סיסטם',
@@ -35,7 +35,7 @@ const names: Record<string, string> = {
   ramet: 'רמט',
   risco: 'Risco',
   seari: 'סרי מתכת',
-  shahaf: 'שחף',
+  shahaf: 'צבי — תשלובת תעשיות דפוס',
   walter: 'וולט שינקמן',
   yoaav: 'מועצה אזורית יואב',
   'zehava kohen': 'זהבה כהן רישוי גנים',
@@ -83,6 +83,13 @@ const categories: { label: string; stems: string[] }[] = [
       'מתב ריילס',
       'קידוחי סי אפ איי',
       'שיש דנור',
+      'אל מור',
+      'דוד זכריה ובניו',
+      'טר ארמה בעמ',
+      'י.ד. עשוש',
+      'לוגו עוז הדרום',
+      'ע.ל.גיבור',
+      'arta',
     ],
   },
   {
@@ -91,7 +98,7 @@ const categories: { label: string; stems: string[] }[] = [
   },
   {
     label: 'דפוס ונייר',
-    stems: ['megvan 2002'],
+    stems: ['megvan 2002', 'מימלן פרספורט', 'shahaf'],
   },
   {
     label: 'חקלאות',
@@ -103,22 +110,12 @@ const categories: { label: string; stems: string[] }[] = [
   },
   {
     label: 'שירותים, חינוך וקהילה',
-    stems: ['zehava kohen', 'גן רוחלה', 'רשת גני מנדי', 'עמותת אנוש', 'ציפי דבש'],
+    stems: ['zehava kohen', 'גן רוחלה', 'רשת גני מנדי', 'עמותת אנוש', 'ציפי דבש', 'גלים'],
   },
   {
+    // Safety net: any logo not explicitly placed above lands here.
     label: 'לקוחות נוספים',
-    stems: [
-      'arta',
-      'shahaf',
-      'אל מור',
-      'גלים',
-      'דוד זכריה ובניו',
-      'טר ארמה בעמ',
-      'י.ד. עשוש',
-      'לוגו עוז הדרום',
-      'מימלן פרספורט',
-      'ע.ל.גיבור',
-    ],
+    stems: [],
   },
 ];
 

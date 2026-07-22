@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, FileText, Calendar, PieChart, Layout } from 'lucide-react';
+import { Briefcase, FileText, Calendar, PieChart } from 'lucide-react';
 import styles from './Services.module.css';
 
 interface Service {
@@ -14,18 +14,12 @@ const services: Service[] = [
   {
     id: 'business-consulting',
     title: 'ייעוץ וליווי עסקי',
-    description: 'ניסיון של מעל 35 שנה בייעוץ כלכלי ופיתוח עסקי — אבחון, גיבוש הרעיון וליווי פיננסי, שיווקי, ארגוני ותפעולי.',
+    description: 'ניסיון של מעל 35 שנה בייעוץ כלכלי ופיתוח עסקי — אבחון, גיבוש הרעיון, בניית מודל עסקי וליווי פיננסי, ארגוני ותפעולי.',
     icon: <Briefcase size={40} />,
   },
   {
-    id: 'business-model',
-    title: 'מודל עסקי ובדיקת כדאיות',
-    description: 'בניית מודל עסקי (Canvas) הבוחן קהלי יעד, הצעת ערך והכנסות — לצד בדיקת כדאיות כלכלית והתכנות לפרויקטים.',
-    icon: <Layout size={40} />,
-  },
-  {
     id: 'business-plans',
-    title: 'תוכניות עסקיות והלוואות',
+    title: 'תוכניות עסקיות והפניה לבקשות להלוואות',
     description: 'כתיבת עשרות תוכניות עסקיות: אשראי ובנקים, מרכז השקעות ומפעל מאושר, הקצאת קרקע, המדען הראשי ותנופה.',
     icon: <FileText size={40} />,
   },

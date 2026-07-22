@@ -32,7 +32,7 @@ const AccessibilityPage: React.FC = () => {
       <section>
         <h2>פרטי רכז הנגישות</h2>
         <p>שם: שוקי בן שבת</p>
-        <p>טלפון: 08-8643-633</p>
+        <p>טלפון: 052-450-1010</p>
         <p>אימייל: shuki@shuki-consultant.com</p>
       </section>
       

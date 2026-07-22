@@ -56,10 +56,10 @@
 }
 
 .title {
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
   color: #fff;
   margin-bottom: 1.4rem;
-  line-height: 1.05;
+  line-height: 1.08;
   font-weight: 800;
   letter-spacing: -0.03em;
   animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
@@ -152,18 +152,25 @@
 
 /* Visual side */
 .visual {
-  position: relative;
-  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   animation: fadeIn 1s ease 0.3s both;
 }
 
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 360px;
+}
+
 .logoCard {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
+  width: 260px;
+  height: 260px;
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.06);
@@ -181,30 +188,18 @@
 }
 
 .floatCard {
-  position: absolute;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  background: rgba(255, 255, 255, 0.96);
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.98);
   color: var(--ink);
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.7rem 1.1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.95rem 1.35rem;
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-lg);
-}
-
-.floatOne {
-  top: 6%;
-  right: -4%;
-  animation: floatY 5s ease-in-out infinite;
-}
-
-.floatTwo {
-  bottom: 6%;
-  left: -6%;
-  animation: floatY 5.5s ease-in-out 0.6s infinite;
+  border-right: 4px solid var(--brand);
 }
 
 .dot {

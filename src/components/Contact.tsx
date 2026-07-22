@@ -14,11 +14,11 @@ const Contact: React.FC = () => {
 
         <div className={styles.contactGrid}>
           <div className={styles.info}>
-            <a href="tel:08-8643633" className={styles.infoItem}>
+            <a href="tel:0524501010" className={styles.infoItem}>
               <span className={styles.iconWrap}><Phone className={styles.icon} /></span>
               <div>
                 <strong>טלפון</strong>
-                <p>08-8643-633</p>
+                <p>052-450-1010</p>
               </div>
             </a>
             <a href="mailto:shuki@shuki-consultant.com" className={styles.infoItem}>

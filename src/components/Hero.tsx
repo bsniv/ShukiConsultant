@@ -16,7 +16,6 @@ const Hero: React.FC = () => {
       <div className={styles.glow} aria-hidden="true" />
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.content}>
-          <span className={`kicker ${styles.kicker}`}>ייעוץ · אסטרטגיה · פיתוח עסקי</span>
           <h1 className={styles.title}>
             ההצלחה שלך <br />היא <span className={styles.accent}>העסק שלנו</span>
           </h1>
@@ -39,16 +38,18 @@ const Hero: React.FC = () => {
         </div>
 
         <div className={styles.visual} aria-hidden="true">
+          <div className={styles.badges}>
+            <div className={styles.floatCard}>
+              <span className={styles.dot} />
+              ניהול לוחות זמנים ובקרת תקציבית
+            </div>
+            <div className={styles.floatCard}>
+              <span className={styles.dot} />
+              תוכניות עסקיות והפניה לבקשות להלוואות
+            </div>
+          </div>
           <div className={styles.logoCard}>
             <img src={logo} alt="" className={styles.logoImg} />
-          </div>
-          <div className={`${styles.floatCard} ${styles.floatOne}`}>
-            <span className={styles.dot} />
-            ניהול לוחות זמנים ובקרת תקציבית
-          </div>
-          <div className={`${styles.floatCard} ${styles.floatTwo}`}>
-            <span className={styles.dot} />
-            תוכניות עסקיות והפניה לבקשות להלוואות
           </div>
         </div>
       </div>
