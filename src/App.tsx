@@ -27,7 +27,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <Router basename="/ShukiConsultant">
+    <Router>
       <div className="app">
         <ScrollToTop />
         <Header />
